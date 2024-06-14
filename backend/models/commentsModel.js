@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const commentShema = new mongoose.Schema(
     {
-        comment: { type: String }
+        user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        recipe: { type: mongoose.Schema.Types.ObjectId, ref: "Recipe" },
+        comment: { type: String, required: true }
     },
     { timestamps: true }
 );
