@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/apiAuth", userRoutes);
-app.use("/apiAuth", recipeRoutes);
+app.use("/apiRecipe", recipeRoutes);
 
 mongoose.connect(process.env.MONGOOSE_URI).then(() => {
     console.log("MongoDB connected successfully");
